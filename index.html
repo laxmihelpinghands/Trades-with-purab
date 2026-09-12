@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>TRADE WITH PURAB</title>
+
+    <!-- ========================================== -->
+    <!-- META PIXEL & TRACKING CODE -->
+    <!-- ========================================== -->
+    <script>
+        !function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) :
+                    n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1118379103977489');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1118379103977489&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- ========================================== -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #03080e;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #050c14;
+            border: 2px solid #00b4d8;
+            border-radius: 28px;
+            padding: 20px 18px 18px 18px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 180, 216, 0.35), inset 0 0 10px rgba(0, 180, 216, 0.15);
+            position: relative;
+        }
+
+        .profile-sec {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .profile-box {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid #00d2ff;
+            overflow: hidden;
+            box-shadow: 0 0 18px #00d2ff;
+            background-color: #000;
+        }
+
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-name {
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 18px;
+            text-align: left;
+            padding: 0 5px;
+        }
+
+        .feature-list li {
+            font-size: 15px;
+            color: #d1d5db;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list .icon {
+            font-size: 18px;
+            width: 22px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .join-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: linear-gradient(90deg, #00b4d8 0%, #805ad5 100%);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 50px;
+            box-shadow: 0 0 16px rgba(128, 90, 213, 0.4);
+            margin-bottom: 15px;
+            letter-spacing: 0.8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .join-btn:active {
+            transform: scale(0.98);
+        }
+
+        .quote-text {
+            font-size: 14px;
+            color: #e5e7eb;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        .ad-badge {
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 9px;
+            font-size: 12.5px;
+            color: #9ca3af;
+            margin-bottom: 12px;
+            background-color: rgba(255, 255, 255, 0.01);
+            font-weight: 500;
+        }
+
+        .ad-badge a {
+            color: #00b4d8;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .ad-badge a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer-box {
+            font-size: 10.5px;
+            color: #6b7280;
+            line-height: 1.35;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .footer-links {
+            font-size: 11px;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: underline;
+        }
+
+        /* ========== FLOATING RE-OPEN BUTTON ========== */
+        .float-tg-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #00b4d8, #805ad5);
+            color: white;
+            border: none;
+            border-radius: 60px;
+            padding: 16px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(0, 180, 216, 0.5);
+            cursor: pointer;
+            z-index: 999;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .float-tg-btn:hover {
+            transform: scale(1.05);
+        }
+        .float-tg-btn.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <!-- Profile Image -->
+        <div class="profile-sec">
+            <div class="profile-box">
+                <img src="https://kappa.lol/yG0TGN" alt="Profile Image">
+            </div>
+        </div>
+
+        <!-- Name Title -->
+        <div class="main-name">TRADE WITH PURAB ™</div>
+
+        <!-- Point List -->
+        <ul class="feature-list">
+            <li><span class="icon">🌐</span> Learning & Educational Sessions</li>
+            <li><span class="icon">📊</span> Market Concepts & Awareness</li>
+            <li><span class="icon">💎</span> Chart Reading Concepts</li>
+            <li><span class="icon">💻</span> Educational Case Discussions</li>
+        </ul>
+
+        <!-- Telegram Button -->
+        <button id="telegramLink" class="join-btn" onclick="openTelegramLink(event)">
+            JOIN TELEGRAM NOW
+        </button>
+
+        <!-- Hindi Quote -->
+        <div class="quote-text">
+            नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।
+        </div>
+
+        <!-- Agency Tag -->
+        <div class="ad-badge">
+            Promoted by <a href="https://t.me/Meta_setup_prince" target="_blank">META MARKETING AGENCY BY PRINCE</a>
+        </div>
+
+        <!-- Compliance Disclaimer -->
+        <div class="disclaimer-box">
+            <strong>Disclaimer:</strong> Content shared is purely for educational purposes. We do not provide buy/sell tips or guaranteed returns. Investments in the securities market are subject to market risks. Read all related documents carefully before investing.
+        </div>
+
+        <!-- Footer Policy Links -->
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Disclaimer</a><br>
+            This site is not a part of the Facebook™ website or Meta Platforms, Inc.
+        </div>
+
+    </div>
+
+    <!-- Floating Re-Open Button -->
+    <button class="float-tg-btn" id="floatTelegramBtn">
+        <i class="fab fa-telegram-plane"></i> Re-Open Telegram
+    </button>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT - TRACKING + AUTO-OPEN -->
+    <!-- ========================================== -->
+    <script>
+        (function() {
+            'use strict';
+
+            var CONFIG = {
+                TELEGRAM_LINK: 'https://t.me/+aocPTbcW_hBmZTI1',
+                PIXEL_ID: '1118379103977489',
+                AUTO_OPEN_DELAY: 5000, // 5 seconds
+                FLOATING_BTN_DELAY: 6000
+            };
+
+            var linkOpened = false;
+
+            function trackEvent(eventName, params) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', eventName, params || {});
+                    console.log('✅ Pixel Track:', eventName, params);
+                }
+            }
+
+            function trackCustom(eventName, params) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('trackCustom', eventName, params || {});
+                    console.log('✅ Pixel TrackCustom:', eventName, params);
+                }
+            }
+
+            // PageView + ViewContent on load
+            (function trackPageView() {
+                var params = new URLSearchParams(window.location.search);
+                var fbclid = params.get('fbclid') || '';
+                if (fbclid) {
+                    sessionStorage.setItem('fbclid', fbclid);
+                    trackEvent('PageView', { fbclid: fbclid });
+                } else {
+                    trackEvent('PageView');
+                }
+                trackEvent('ViewContent', { content_name: 'TRADE WITH PURAB' });
+            })();
+
+            // Browser detection
+            var isFacebookBrowser = /(FBAV|FBAN|FBIOS|FB_IAB)/i.test(navigator.userAgent);
+            var isInstagramBrowser = /(Instagram|IG)/i.test(navigator.userAgent);
+
+            // Telegram link opener (fires Lead BEFORE redirect)
+            function openTelegramLink(e) {
+                if (e) e.preventDefault();
+                if (linkOpened) return;
+                linkOpened = true;
+
+                var fbclid = sessionStorage.getItem('fbclid') || '';
+
+                trackCustom('TelegramClick', { content_name: 'TRADE WITH PURAB' });
+                trackEvent('Lead', {
+                    content_name: 'Telegram Join',
+                    content_category: 'Channel',
+                    fbclid: fbclid,
+                    browser: isFacebookBrowser ? 'Facebook' : (isInstagramBrowser ? 'Instagram' : 'Other')
+                });
+                trackEvent('Subscribe');
+
+                // Wait 200ms for pixel to fire, THEN redirect
+                setTimeout(function() {
+                    window.location.href = CONFIG.TELEGRAM_LINK;
+                }, 200);
+            }
+
+            // 🔥 Auto-open at 5 seconds
+            setTimeout(function() {
+                if (!linkOpened) {
+                    openTelegramLink();
+                }
+            }, CONFIG.AUTO_OPEN_DELAY);
+
+            // Floating button
+            var floatBtn = document.getElementById('floatTelegramBtn');
+            if (floatBtn) {
+                setTimeout(function() {
+                    if (!linkOpened) floatBtn.classList.add('show');
+                }, CONFIG.FLOATING_BTN_DELAY);
+
+                floatBtn.addEventListener('click', function() {
+                    openTelegramLink();
+                });
+            }
+
+            // Manual button click
+            document.getElementById('telegramLink').addEventListener('click', openTelegramLink);
+
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden && !linkOpened && floatBtn) {
+                    floatBtn.classList.add('show');
+                }
+            });
+
+            console.log('✅ TRADE WITH PURAB loaded!');
+            console.log('🔗 Pixel ID:', CONFIG.PIXEL_ID);
+            console.log('⏱️ Auto-open at', CONFIG.AUTO_OPEN_DELAY / 1000, 'seconds');
+        })();
+    </script>
+
+</body>
+</html>
