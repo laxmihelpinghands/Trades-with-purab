@@ -420,26 +420,11 @@ body.scrolled .container{
     </a>
 </div>
 
-<!-- ===== JS: Lead Event Tracking ===== -->
+<!-- ===== JS: Simple (No Lead Event) ===== -->
 <script>
 (function(){
 
-    /* ---- 1. Lead Event fire on Telegram click ---- */
-    var buttons = document.querySelectorAll('.join-btn');
-    buttons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            if(typeof fbq === 'function'){
-                fbq('track', 'Lead', {
-                    content_name: 'Telegram Join',
-                    value: 1.00,
-                    currency: 'INR'
-                });
-                fbq('track', 'Contact');
-            }
-        });
-    });
-
-    /* ---- 2. Sticky button after scroll ---- */
+    /* ---- 1. Sticky button after scroll ---- */
     var scrolled = false;
     window.addEventListener('scroll', function(){
         if(window.scrollY > 400 && !scrolled){
@@ -451,7 +436,7 @@ body.scrolled .container{
         }
     });
 
-    /* ---- 3. Live counter ---- */
+    /* ---- 2. Live counter ---- */
     var liveEl = document.getElementById('liveCount');
     if(liveEl){
         var base = 3214;
@@ -462,7 +447,7 @@ body.scrolled .container{
         }, 3500);
     }
 
-    /* ---- 4. Time on page tracking ---- */
+    /* ---- 3. Time on page tracking (optional, no lead event) ---- */
     setTimeout(function(){
         if(typeof fbq === 'function'){
             fbq('trackCustom', 'Stayed30Sec');
