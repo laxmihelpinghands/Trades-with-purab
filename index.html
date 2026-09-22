@@ -450,36 +450,5 @@ body.scrolled .container{
 })();
 </script>
 
-<!-- ===== JS: Telegram Subscribe Event (All Buttons) - FIXED ===== -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  // Sabhi join buttons ko select karo
-  const buttons = document.querySelectorAll(".join-btn");
-  if (!buttons.length) return;
-
-  buttons.forEach(function(btn){
-    btn.addEventListener("click", function (e) {
-
-      // ✅ Sirf real human click track karo (bot clicks ignore)
-      if (!e.isTrusted) {
-        return;
-      }
-
-      // ✅ Unique event ID (Meta isse duplicate handle karega)
-      // LocalStorage hata diya taaki Meta ko HAR click ka signal mile
-      const eventId = "tg_sub_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
-
-      // ✅ Track Subscribe event
-      if (typeof fbq !== "undefined") {
-        fbq('track', 'Subscribe', {}, { eventID: eventId });
-      }
-
-    });
-  });
-
-});
-</script>
-
 </body>
 </html>
