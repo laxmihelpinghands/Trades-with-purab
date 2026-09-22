@@ -420,7 +420,7 @@ body.scrolled .container{
     </a>
 </div>
 
-<!-- ===== JS: Simple (No Lead Event) ===== -->
+<!-- ===== JS: Sticky, Live Counter, Time Tracking ===== -->
 <script>
 (function(){
 
@@ -455,6 +455,45 @@ body.scrolled .container{
     }, 30000);
 
 })();
+</script>
+
+<!-- ===== JS: One-Time Telegram Subscribe Event (All Buttons) ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Sabhi join buttons ko select karo (main, 3rd, bottom, sticky)
+  const buttons = document.querySelectorAll(".join-btn");
+  if (!buttons.length) return;
+
+  buttons.forEach(function(btn){
+    btn.addEventListener("click", function (e) {
+
+      // ✅ Sirf real human click
+      if (!e.isTrusted) {
+        e.preventDefault();
+        return;
+      }
+
+      // ✅ Already tracked? (same key dono HTML me)
+      if (localStorage.getItem("telegram_subscribed") === "true") {
+        return; // Event dobara track nahi hoga
+      }
+
+      // ✅ Mark as tracked
+      localStorage.setItem("telegram_subscribed", "true");
+
+      // ✅ Unique event ID
+      const eventId = "tg_sub_" + Date.now();
+
+      // ✅ Track Subscribe event only once
+      if (typeof fbq !== "undefined") {
+        fbq('track', 'Subscribe', {}, { eventID: eventId });
+      }
+
+    });
+  });
+
+});
 </script>
 
 </body>
