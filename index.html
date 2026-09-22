@@ -6,7 +6,7 @@
 <title>TRADE WITH PURAB - Free Nifty & BankNifty Calls</title>
 <meta name="description" content="Join TRADE WITH PURAB for free daily Nifty, BankNifty & Sensex analysis. Trusted by 50,000+ Indian traders.">
 
-<!-- Meta Pixel Code (NEW) -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -369,7 +369,7 @@ body.scrolled .container{
         🔥 Limited FREE Access Available Today
     </div>
 
-    <!-- 3rd Button (NEW - after alert) -->
+    <!-- 3rd Button -->
     <a class="btn join-btn" href="https://t.me/+aocPTbcW_hBmZTI1" target="_blank" rel="noopener">
         Join Free Telegram Channel →
     </a>
@@ -420,7 +420,7 @@ body.scrolled .container{
     </a>
 </div>
 
-<!-- ===== JS: Sticky, Live Counter, Time Tracking ===== -->
+<!-- ===== JS: Sticky, Live Counter ===== -->
 <script>
 (function(){
 
@@ -447,45 +447,30 @@ body.scrolled .container{
         }, 3500);
     }
 
-    /* ---- 3. Time on page tracking (optional, no lead event) ---- */
-    setTimeout(function(){
-        if(typeof fbq === 'function'){
-            fbq('trackCustom', 'Stayed30Sec');
-        }
-    }, 30000);
-
 })();
 </script>
 
-<!-- ===== JS: One-Time Telegram Subscribe Event (All Buttons) ===== -->
+<!-- ===== JS: Telegram Subscribe Event (All Buttons) - FIXED ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Sabhi join buttons ko select karo (main, 3rd, bottom, sticky)
+  // Sabhi join buttons ko select karo
   const buttons = document.querySelectorAll(".join-btn");
   if (!buttons.length) return;
 
   buttons.forEach(function(btn){
     btn.addEventListener("click", function (e) {
 
-      // ✅ Sirf real human click
+      // ✅ Sirf real human click track karo (bot clicks ignore)
       if (!e.isTrusted) {
-        e.preventDefault();
         return;
       }
 
-      // ✅ Already tracked? (same key dono HTML me)
-      if (localStorage.getItem("telegram_subscribed") === "true") {
-        return; // Event dobara track nahi hoga
-      }
+      // ✅ Unique event ID (Meta isse duplicate handle karega)
+      // LocalStorage hata diya taaki Meta ko HAR click ka signal mile
+      const eventId = "tg_sub_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
 
-      // ✅ Mark as tracked
-      localStorage.setItem("telegram_subscribed", "true");
-
-      // ✅ Unique event ID
-      const eventId = "tg_sub_" + Date.now();
-
-      // ✅ Track Subscribe event only once
+      // ✅ Track Subscribe event
       if (typeof fbq !== "undefined") {
         fbq('track', 'Subscribe', {}, { eventID: eventId });
       }
