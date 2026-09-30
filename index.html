@@ -420,7 +420,7 @@ body.scrolled .container{
     </a>
 </div>
 
-<!-- ===== JS: Sticky, Live Counter, Meta Pixel Subscribe ===== -->
+<!-- ===== JS: Sticky, Live Counter ===== -->
 <script>
 (function(){
 
@@ -446,20 +446,6 @@ body.scrolled .container{
             liveEl.textContent = base.toLocaleString('en-IN');
         }, 3500);
     }
-
-    /* ---- 3. Meta Pixel Subscribe Event on Join Button Click ---- */
-    document.querySelectorAll('.join-btn').forEach(function(btn){
-        btn.addEventListener('click', function(){
-            if(typeof fbq === 'function'){
-                fbq('track', 'Subscribe', {
-                    content_name: 'Telegram Channel Join',
-                    content_category: 'Lead',
-                    value: 1.00,
-                    currency: 'INR'
-                });
-            }
-        });
-    });
 
 })();
 </script>
